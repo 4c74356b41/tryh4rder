@@ -57,10 +57,10 @@ public static async Task<string[]> ParseTelegramMessage(string data) {
             if (parsed.message.type != "tweet") {
                 dictionary.Add("reply_markup", @"{""inline_keyboard"":[[{""text"":""MrllamaSC?"",""callback_data"":""MrllamaSC""}],[{""text"":""Placeholder"",""callback_data"":""Placeholder""}]]}");
             }
-            if (callback_ID != "") {
-                dictionary.Add("callback_query_id", callback_ID);
-                url = String.Format("https://api.telegram.org/bot{0}/answerCallbackQuery", key_tg);
-            }
+            // if (callback_ID != "") {
+            //    dictionary.Add("callback_query_id", callback_ID);
+            //    url = String.Format("https://api.telegram.org/bot{0}/answerCallbackQuery", key_tg);
+            // }
             break;
     }
     json = JsonConvert.SerializeObject(dictionary);
