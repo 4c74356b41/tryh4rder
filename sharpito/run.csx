@@ -46,7 +46,7 @@ public static async Task<string[]> ParseTelegramMessage(string data) {
             dictionary.Add("type", "tweet");
             dictionary.Add("searchfor", "MrllamaSC");
             dictionary.Add("chatId", chatId);
-            dictionary.Add("count", "1");
+            dictionary.Add("count", "5");
             dictionary.Add("callback_query_id", callback_ID);
             url = String.Format("https://prod-14.northeurope.logic.azure.com/workflows/7d6c2b04c87b4efea8897f9533cab980/triggers/manual/paths/invoke/getTweets?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig={0}", key_la);
             break;
